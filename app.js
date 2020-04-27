@@ -7,6 +7,10 @@ var acceptingAnswers = false;
 var score = 0;
 var questionNumber = 0;
 var availableQuestions = [];
+var totalSeconds = 60 * 10;
+var minutes = parseInt(totalSeconds / 60);
+var seconds = parseInt(totalSeconds % 60);
+
 
 var questions = [
     {
@@ -101,6 +105,19 @@ function startGame() {
     availableQuestions = [...questions];
     getNewQuestion();
 };
+
+function checkTime() {
+    document.getElementById("timer").innerText = minutes + " minutes " + seconds + " seconds";
+    if (totalSeconds <= 0) {
+        setTimeout("document.game.submit(),1");
+    } else {
+        totalSeconds = totalSeconds - 1;
+        minutes = parseInt(totalSeconds / 60);
+        seconds = parseInt(totalSeconds % 60);
+        setTimeout("checkTime()", 1000);
+    }
+}
+setTimeout("checkTime()", 1000);
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionNumber >= maxQuestions) {
