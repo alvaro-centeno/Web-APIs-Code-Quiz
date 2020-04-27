@@ -7,7 +7,7 @@ var acceptingAnswers = false;
 var score = 0;
 var questionNumber = 0;
 var availableQuestions = [];
-var totalSeconds = 60 * 10;
+var totalSeconds = 60 * 5;
 var minutes = parseInt(totalSeconds / 60);
 var seconds = parseInt(totalSeconds % 60);
 
@@ -22,75 +22,75 @@ var questions = [
         answer: 1
     },
     {
-        question: "IS this question 2?",
-        choice1: "maybe",
-        choice2: "yes",
-        choice3: "no",
-        choice4: "maybe-so",
+        question: "What is a string?",
+        choice1: "a string is a datatype that returns either of two values i.e. true or false.",
+        choice2: 'a string stores a series of characters like "John Doe".',
+        choice3: "a string is a single variable that is used to store different elements.",
+        choice4: " a string is an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs.",
         answer: 2
     },
     {
-        question: "Are you going crazy?",
-        choice1: "no",
-        choice2: "maybe",
-        choice3: "shoulder shrug",
-        choice4: "yes",
+        question: "What is local storage?",
+        choice1: "The uhal building in Portrero Hill",
+        choice2: "The platform used to create and edit HTML, CSS, and Javascript",
+        choice3: "Your e-mail inbox",
+        choice4: "a type of web storage that allows JavaScript sites and apps to store and access data right in the browser with no expiration date.",
         answer: 4
     },
     {
-        question: "Inside which HTML element do we put the Javascript?",
-        choice1: "<script>",
-        choice2: "<javascript>",
-        choice3: "<js>",
-        choice4: "<scripting>",
+        question: "DOM is an acronym for:",
+        choice1: "Document Object Model",
+        choice2: "Data of Model",
+        choice3: "Document Object Maker",
+        choice4: "Data Object Model",
         answer: 1
     },
     {
-        question: "IS this question 2?",
+        question: "The for statement creates a loop that is executed as long as a condition is true.",
         choice1: "maybe",
-        choice2: "yes",
-        choice3: "no",
-        choice4: "maybe-so",
+        choice2: "true",
+        choice3: "false",
+        choice4: "sometimes",
         answer: 2
     },
     {
-        question: "Are you going crazy?",
-        choice1: "no",
-        choice2: "maybe",
-        choice3: "shoulder shrug",
-        choice4: "yes",
-        answer: 4
+        question: "What is the result of the following: Number('1') - 1 === 0;",
+        choice1: "TypeError",
+        choice2: "false",
+        choice3: "true",
+        choice4: "NaN",
+        answer: 3
     },
     {
-        question: "Inside which HTML element do we put the Javascript?",
-        choice1: "<script>",
-        choice2: "<javascript>",
-        choice3: "<js>",
-        choice4: "<scripting>",
-        answer: 1
+        question: "What is the result of the following: (true + false) > 2 + true;",
+        choice1: "TypeError",
+        choice2: "true",
+        choice3: "false",
+        choice4: "Nan",
+        answer: 3
     },
     {
-        question: "IS this question 2?",
-        choice1: "maybe",
-        choice2: "yes",
-        choice3: "no",
-        choice4: "maybe-so",
+        question: "What is the correct JavaScript syntax to change the content of the following HTML code: <h1 id='music'> Music Lover </h1> ",
+        choice1: "document.getElement('music').innerHTML='I am a music lover';",
+        choice2: "document.getElementById('music').innerHTML='I am a music lover';",
+        choice3: "document.getId('music')='I am a music lover';",
+        choice4: "document.getElementById('music').innnerHTML= I am a music lover;",
         answer: 2
     },
     {
-        question: "Are you going crazy?",
-        choice1: "no",
-        choice2: "maybe",
-        choice3: "shoulder shrug",
-        choice4: "yes",
+        question: "What is the correct syntax for referring to an external script called 'app.js'?",
+        choice1: "<script href='app.js'></script>",
+        choice2: "<script ref='app.js'></script>",
+        choice3: "none is needed as long as it's in the same folder",
+        choice4: "<script src='app.js'></script>",
         answer: 4
     },
     {
-        question: "Are you going crazy?",
-        choice1: "no",
-        choice2: "maybe",
-        choice3: "shoulder shrug",
-        choice4: "yes",
+        question: "Which of the following is the correct syntax to display “MusicLove” in an alert box using JavaScript",
+        choice1: "alertbox('MusicLove');",
+        choice2: "msg('MusicLove');",
+        choice3: "msgbox('MusicLove');",
+        choice4: "alert('MusicLove');",
         answer: 4
     }
 ];
