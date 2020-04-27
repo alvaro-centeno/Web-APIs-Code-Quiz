@@ -1,0 +1,42 @@
+.questContainer {
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #963484;
+}
+
+
+
+.option {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #963484;
+    color: white;
+    border-radius: 20px;
+
+}
+
+.questOption {
+    padding: 15px;
+    width: 100%;
+}
+
+
+#progBox {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.progress {
+    text-align: center;
+    font-size: 20px;
+}
+
+.progText {
+    text-align: center; 
+}

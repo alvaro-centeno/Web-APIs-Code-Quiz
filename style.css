@@ -29,7 +29,7 @@ h1, h2, h3, h4 {
 }
 
 h1{
-    font-size: 30pxpx;
+    font-size: 30px;
     color:White;
     margin-bottom: 50px;
 }
@@ -93,6 +93,10 @@ h3 {
     color: white;
     background-color: #963484;
     border-radius: 20px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 form{
