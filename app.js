@@ -103,6 +103,9 @@ function startGame() {
 };
 
 function getNewQuestion() {
+    if (availableQuestions.length === 0 || questionNumber >= maxQuestions) {
+        return window.location.assign("input.html");
+    }
     questionNumber++;
     questionNumberText.innerText = questionNumber + "/" + maxQuestions;
     var questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -113,3 +116,82 @@ function getNewQuestion() {
         var number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
+
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true;
+};
+
+choices.forEach(function (choice) {
+    choice.addEventListener("click", function (e) {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        var selectedChoice = e.target;
+        var selectedAnswer = selectedChoice.dataset["number"];
+
+        var classToApply = "incorrect";
+        if (selectedAnswer == currentQuestion.answer) {
+            classToApply = "correct";
+        }
+
+        if (classToApply === "correct") {
+            incrementScore(correctBonus);
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        setTimeout(function () {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 700);
+
+    });
+});
+
+incrementScore = function (num) {
+    score += num;
+    scoreText.innerText = score;
+}
+
+startGame();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

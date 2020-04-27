@@ -25,6 +25,14 @@
     width: 100%;
 }
 
+.correct {
+    background-color: greenyellow;
+}
+
+.incorrect {
+    background-color: red;
+}
+
 #progBox {
     display: flex;
     justify-content: space-between;
